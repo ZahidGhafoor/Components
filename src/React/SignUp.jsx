@@ -79,7 +79,7 @@ const SignUp = () => {
 
   return (
     <>
-      <form className = "fomtag" autoComplete="nope" onSubmit={onSubmit}>
+      <form autoComplete= "off" onSubmit={onSubmit}>
         <div className="main_container">
           <div className="centrel_div">
             <div className="img">
