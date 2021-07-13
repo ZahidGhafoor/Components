@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.fomtag{
+  input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+}
+
+.main_container {
+  font-family: -webkit-pictograph;
+  
+  .centrel_div {
+    // width: 45%;
+    background-color: #25303c;
+    margin: 30px auto;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  .img {
+    .logo_img {
+      height: 3rem;
+      width: 280px;
+    }
+  }
+  .heading {
+    .heading_title {
+      color: white;
+      margin-bottom: 10px;
+    }
+  }
+  .inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // width: 400px;
+    // margin: 20px 0px;
+    .input2 {
+      background-color: #1d2630;
+      height: 30px;
+      width: 100%;
+      color: white;
+    }
+  }
+  .button {
+    .submit {
+      // margin: 20px auto;
+      width: 400px;
+      padding: 70px auto;
+      height: 3rem;
+      background-color: #f16219;
+      border-radius: 5px;
+      border: 1px solid black;
+      color: white;
+      font-weight: bold;
+    }
+  }
+  .confirm {
+    margin-top: 10px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    .confirm_head {
+      margin-right: 10px;
+    }
+    .confirm_link {
+      color: #f16219;
+    }
+  }
+}
