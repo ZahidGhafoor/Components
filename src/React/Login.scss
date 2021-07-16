@@ -5,17 +5,20 @@
   
   .main_container {
     font-family: -webkit-pictograph;
+    margin: 0 ;
     
     .centrel_div {
       // width: 35%;
+      // height: 200px;
       background-color: #25303c;
-      margin: 30px auto;
-      padding: 20px 20px;
+      // margin: 30px auto;
+      // padding: 20px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       border-radius: 10px;
+      
     }
     .img {
       .logo_img {

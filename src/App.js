@@ -9,7 +9,7 @@ import Checkout from "./React/Checkout";
 import ConfirmChk from "./React/ConfirmChk";
 import Cart from "./React/Cart";
 import SignUp from "./React/SignUp";
-import Login from "./React/Login";
+import {Log} from "./React/Log";
 
 import Admin from "./React/Admin/Admin"
 // import test from './test'
@@ -19,9 +19,9 @@ const App = () => {
     <>
       <Router>
         <Switch>
-           <Route path="/" exact component={Login} />
+           <Route path="/" exact component={Log} />
           <Route path="/SignUp" component={SignUp} />
-          <Route path="/Login" component={Login} />
+          <Route path="/Login" component={Log} />
           <Route path="/cart" component={Cart} />
           <Route path="/admin" component={Admin} />
         </Switch>
@@ -33,3 +33,4 @@ const App = () => {
 };
 
 export default App;
+
