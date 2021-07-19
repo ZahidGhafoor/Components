@@ -243,7 +243,7 @@ const Cart = () => {
                   <TableHead>
                     <TableRow>
                       <TableCell>Subtotal</TableCell>
-                      <TableCell align="right">$2190</TableCell>
+                      <TableCell align="center">$2190</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -252,9 +252,8 @@ const Cart = () => {
                         <TableCell component="th" scope="row">
                           {row.Tax}
                         </TableCell>
-                        <TableCell align="right">{row.Money}</TableCell>
-                        {/* <TableCell align="right">bjhg</TableCell> */}
-                        <TableCell align="right">{row.fat}</TableCell>
+                        <TableCell align="center">{row.Money}</TableCell>
+                        <TableCell align="left">{row.fat}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>

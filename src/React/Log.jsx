@@ -125,7 +125,7 @@ function Log() {
   return (
     <>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open dialog
+        LOG IN
       </Button>
       <Dialog
         onClose={handleClose}
