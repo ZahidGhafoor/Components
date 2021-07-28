@@ -1,0 +1,15 @@
+.signin__wrapper{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    box-sizing: border-box;
+}
+.signin__box{
+    width: 310px;
+    height: 90vh;
+    padding: 25px 15px;
+    background-color: red;
+}
