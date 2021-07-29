@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
 
@@ -5,11 +6,20 @@ const Api = () => {
   const [posts, setpost] = useState([]);
 
   useEffect(() => {
-    const url = "https://jsonplaceholder.typicode.com/posts";
-    fetch(url)
-      .then((resp) => resp.json())
-      .then((resp) => setpost(resp))
-      .catch((error) => console.log("error"));
+    const getData = async ()=>{
+        try {
+            const url = "https://jsonplaceholder.typicode.com/posts";
+            const response = await axios.get(url);
+            console.log(response)
+            setpost(response.data)
+        } catch (error) {
+            console.log(error)
+        }
+        //   .then((resp) => resp.json())
+        //   .then((resp) => setpost(resp))
+        //   .catch((error) => console.log("error"));
+      }
+      getData();
   }, []);
 
   return (
