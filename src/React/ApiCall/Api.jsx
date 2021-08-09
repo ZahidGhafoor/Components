@@ -15,9 +15,6 @@ const Api = () => {
         } catch (error) {
             console.log(error)
         }
-        //   .then((resp) => resp.json())
-        //   .then((resp) => setpost(resp))
-        //   .catch((error) => console.log("error"));
       }
       getData();
   }, []);
