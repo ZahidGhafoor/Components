@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import Drawer from "./elements/Admin/Drawer";
 
-// import MobileCont from './React/MobileCont';
 // import Cont from './Cont';
 import Checkout from "./React/Checkout";
 import ConfirmChk from "./React/ConfirmChk";
@@ -19,6 +18,7 @@ import Dfile from "./React/ZIndustries/Dfile";
 import Api from "./React/ApiCall/Api";
 import Axois from "./React/ApiCall/Axois";
 import Pokemon from "./React/ApiCall/PokemonApi";
+import Map from "./React/Map";
 // import test from './test'
 
 const App = () => {
@@ -26,11 +26,11 @@ const App = () => {
     <>
       <Router>
         <Switch>
-          <Route path="/" exact component={Pokemon} />
+          <Route path="/" exact component={Map} />
           <Route path="/SignUp" component={SignUp} />
           <Route path="/Login" component={Log} />
           <Route path="/cart" component={Cart} />
-          <Route path="/admin" component={Admin} />
+          <Route path="/mobilecont" component={MobileCont} />
         </Switch>
         {/* <Cart/> */}
       </Router>

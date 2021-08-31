@@ -41,7 +41,7 @@ const Style = makeStyles({
   },
 });
 
-  const MobileCont = () => {
+const MobileCont = () => {
   const classes = Style();
   const [Fullname, useFullNme] = useState({
     FName: "",
@@ -51,7 +51,9 @@ const Style = makeStyles({
   });
 
   const InputEvent = (event) => {
-    // console.log(event.target.value);
+    // (event.target.value);
+    // (event.target.name);
+    console.log(event.target);
 
     const { value, name } = event.target;
 
@@ -59,19 +61,23 @@ const Style = makeStyles({
       return {
         ...pValue,
         [name]: value,
-
       };
     });
   };
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log("YOu First name is =", Fullname.FName,
-      "Your Last name is =", Fullname.LName,
-      "Your Email is =", Fullname.Email,
-      "Your msg is =", Fullname.mesg)
-    alert("Your Query has been submitted sucessfully")
+    console.log(
+      "YOu First name is =",
+      Fullname.FName,
+      "Your Last name is =",
+      Fullname.LName,
+      "Your Email is =",
+      Fullname.Email,
+      "Your msg is =",
+      Fullname.mesg
+    );
+    alert("Your Query has been submitted sucessfully");
   };
-
 
   return (
     <>
@@ -88,11 +94,15 @@ const Style = makeStyles({
                 variant="outlined"
                 onChange={InputEvent}
                 value={Fullname.FName}
-                style={{ width: "100%", marginRight: "23px", marginBottom: "5px" }}
+                style={{
+                  width: "100%",
+                  marginRight: "23px",
+                  marginBottom: "5px",
+                }}
               />
 
               <TextField
-                name='LName'
+                name="LName"
                 type="text"
                 id="outlined-basic"
                 label="Last Name"
@@ -128,25 +138,42 @@ const Style = makeStyles({
               />
             </div>
 
-            <div className="button" >
-              <Button id='materialbtn4' variant="contained" type="submit" className={classes.btn}>
+            <div className="button">
+              <Button
+                id="materialbtn4"
+                variant="contained"
+                type="submit"
+                className={classes.btn}
+              >
                 SIGN UP
-            </Button>
+              </Button>
             </div>
 
-            <div className="Contact_button" >
-              <Button id="materialbtn1" variant="contained" className={classes.btnn}>
+            <div className="Contact_button">
+              <Button
+                id="materialbtn1"
+                variant="contained"
+                className={classes.btnn}
+              >
                 <GitHubIcon />
-              &nbsp;&nbsp;&nbsp; Zendesk
-            </Button>
-              <Button id="materialbtn2" variant="contained" className={classes.btnn}>
+                &nbsp;&nbsp;&nbsp; Zendesk
+              </Button>
+              <Button
+                id="materialbtn2"
+                variant="contained"
+                className={classes.btnn}
+              >
                 <WhatsAppIcon />
-              &nbsp;&nbsp;&nbsp;&nbsp; +923********
-            </Button>
-              <Button id="materialbtn3" variant="contained" className={classes.btnn}>
+                &nbsp;&nbsp;&nbsp;&nbsp; +923********
+              </Button>
+              <Button
+                id="materialbtn3"
+                variant="contained"
+                className={classes.btnn}
+              >
                 <MailOutlineIcon />
-              &nbsp;&nbsp;&nbsp;&nbsp; @instaprint.pk
-            </Button>
+                &nbsp;&nbsp;&nbsp;&nbsp; @instaprint.pk
+              </Button>
             </div>
           </div>
         </div>

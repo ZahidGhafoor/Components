@@ -19,7 +19,7 @@ const Pokemon = () => {
         setWeight(resp.data.weight);
         setId(resp.data.id);
       } catch (error) {
-        console.log(error.response.data.message);
+        console.log(error);
       }
     };
     getData();
@@ -33,6 +33,7 @@ const Pokemon = () => {
         value={num}
         onChange={(event) => {
           setNum(event.target.value);
+          console.log("The event is", event);
         }}
       >
         <option value="1">1</option>

@@ -38,32 +38,57 @@ const arr = [
         Fname: 'Zahid',
         class: 'I.T',
         Rollno: '550',
-        school: 'Herra Mandi'
-    },
+        school: 'Govt School'
+    }
 
 ]
 
-const info=(val)=>{
-    return(
-        <>
-                <h1>Your first name is {val.name} </h1>
-                <h1>Your Last name is {val.Fname} </h1>
-                <h1>Your class is {val.class} </h1>
-                <h1>Yor roll no is {val.Rollno} </h1>
-                <h1>Your City name is {val.school} </h1>
-                <hr />
-</>
-    ) 
-}
+// const info = (val) => {
+//     return (
+//         <>
+//             <h1>Your first name is {val.name} </h1>
+//             <h1>Your Last name is {val.Fname} </h1>
+//             <h1>Your class is {val.class} </h1>
+//             <h1>Yor roll no is {val.Rollno} </h1>
+//             <h1>Your City name is {val.school} </h1>
+//             <hr />
+//         </>
+//     )
+// }
 
 
+
+// const Map = () => {
+//     return (
+//         <>
+//             {arr.map(info)}
+
+
+
+//         </>
+//     )
+// }
 
 const Map = () => {
     return (
         <>
-        {arr.map(info)}
+            {arr.map((val, index, arr) => {
+                return (
+                    <>
+                        {index}
+                        <h1> Your first name is {val.name} </h1>
+                        <h1>Your Last name is {val.Fname} </h1>
+                        <h1>Your class is {val.class} </h1>
+                        <h1>Yor roll no is {val.Rollno} </h1>
+                        <h1>Your City name is {val.school} </h1>
+                        <hr style={{ margin: "10px 0", border: "1px solid red" }} />
+                    </>
+                )
+
+            })}
         </>
     )
+
 }
 
 export default Map
