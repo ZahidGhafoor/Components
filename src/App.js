@@ -26,11 +26,10 @@ const App = () => {
     <>
       <Router>
         <Switch>
-          <Route path="/" exact component={Map} />
+          <Route path="/" exact component={Checkout} />
           <Route path="/SignUp" component={SignUp} />
           <Route path="/Login" component={Log} />
           <Route path="/cart" component={Cart} />
-          <Route path="/mobilecont" component={MobileCont} />
         </Switch>
         {/* <Cart/> */}
       </Router>

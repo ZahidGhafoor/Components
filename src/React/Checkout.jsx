@@ -37,24 +37,18 @@ const Checkout = () => {
   const classes = Style();
 
   const [FullName, useFullName] = useState({
-    checkedA: false,
-    checkedB: false,
-    FName: "",
-    LName: "",
-    ADDRESS: "",
-    COUNTRY: "",
-    STATE: "",
-    CITY: "",
-    POSTAL: "",
-    MOBILE: "",
+    Name: "",
+    Email: "",
+    Phone: "",
+    Salary: "",
+    Position: "",
 
 
   });
 
   const InputEvent = (event) => {
-    // useFullName({ [event.target.name]: event.target.checked });
 
-    const { value, name, checked } = event.target;
+    const { value, name } = event.target;
 
     useFullName((pValue) => {
       return {
@@ -81,16 +75,11 @@ const Checkout = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log("your first name is =", FullName.FName)
-    console.log("your LAST name is =", FullName.LName)
-    console.log("your Adress is =", FullName.ADDRESS)
-    console.log("your country is =", FullName.COUNTRY)
-    console.log("your State is =", FullName.STATE)
-    console.log("your city is =", FullName.CITY)
-    console.log("your postal code is =", FullName.POSTAL)
-    console.log("your MObile Number  is =", FullName.MOBILE)
-    console.log("Checked ==========", FullName.checkedA)
-    console.log("Checked ==========", FullName.checkedB)
+    console.log("your first name is =", FullName.Name)
+    console.log("your Email is =", FullName.Email)
+    console.log("your Phone is =", FullName.Phone)
+    console.log("your Salary is =", FullName.Salary)
+    console.log("your Position is =", FullName.Position)
     alert("Form Submitted")
   }
 
@@ -109,35 +98,36 @@ const Checkout = () => {
               <div className="about_input">
                 <TextField
                   type="text"
-                  name="FName"
-                  label="First Name"
+                  name="Name"
+                  label="Name"
                   variant="outlined"
                   onChange={InputEvent}
-                  value={FullName.FName}
+                  value={FullName.Name}
                   style={{ width: "100%", marginRight: "15px", marginBottom: "10px" }}
                 />
                 <TextField
-                  type="text"
-                  name="LName"
-                  label="Last Name"
+                  type="email"
+                  name="Email"
+                  label="Email"
                   variant="outlined"
                   onChange={InputEvent}
-                  value={FullName.LName}
-                  style={{ width: "100%", marginBottom: "10px" }}
+                  value={FullName.email}
+                  style={{ width: "100%", marginRight: "15px", marginBottom: "10px" }}
                 />
                 <TextField
-                  type="text"
-                  name="ADDRESS"
-                  label="ADDRESS"
+                  type="number"
+                  name="Phone"
+                  label="Phone"
                   variant="outlined"
                   onChange={InputEvent}
-                  value={FullName.ADDRESS}
+                  value={FullName.Phone}
                   style={{ width: "100%", marginBottom: "10px" }}
                 />
+
                 <TextField
                   type="text"
-                  name="COUNTRY"
-                  label="COUNTRY"
+                  name="Salary"
+                  label="Salary"
                   variant="outlined"
                   onChange={InputEvent}
                   value={FullName.COUNTRY}
@@ -145,77 +135,22 @@ const Checkout = () => {
                 />
                 <TextField
                   type="text"
-                  name="STATE"
-                  label="STATE/PROVINCE"
+                  name="Position"
+                  label="Position"
                   variant="outlined"
                   onChange={InputEvent}
                   value={FullName.STATE}
                   style={{ width: "100%", marginBottom: "10px" }}
                 />
-                <TextField
-                  type="text"
-                  name="CITY"
-                  label="CITY"
-                  variant="outlined"
-                  onChange={InputEvent}
-                  value={FullName.CITY}
-                  style={{ width: "100%", marginBottom: "10px" }}
-                />
-                <TextField
-                  type="number"
-                  name="POSTAL"
-                  label="POSTAL CODE"
-                  variant="outlined"
-                  onChange={InputEvent}
-                  value={FullName.POSTAL}
-                  style={{ width: "100%", marginBottom: "10px" }}
-                />
-                <TextField
-                  type="number"
-                  name="MOBILE"
-                  label="MOBILE NUMBER"
-                  variant="outlined"
-                  onChange={InputEvent}
-                  value={FullName.MOBILE}
-                  style={{ width: "100%", marginBottom: "10px" }}
-                />
               </div>
             </div>
-            <h3>Payment Mehtod</h3>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={FullName.checkedA}
-                  onChange={CheckedInputEvent}
-                  name="checkedA"
-                  color="primary"
-                />
-              }
-              label="EasyPaisa"
-            /> <br />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={FullName.checkedB}
-                  onChange={CheckedInputEvent}
-                  name="checkedB"
-                  color="primary"
-                />
-              }
-              label="JazzCash"
-            />
             <div className="button" >
-              <Link to= '/services'> <Button id='materialbtn4' variant="contained" type="submit" className={classes.btn}>
+              <Button id='materialbtn4' variant="contained" type="submit" className={classes.btn}>
                 PLACE ORDER
               </Button>
-              </Link>
             </div>
-        
+
           </div>
-          <Link
-          to = '/services'>
-            Services
-          </Link>
         </div>
       </form>
     </>
