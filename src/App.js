@@ -26,7 +26,7 @@ const App = () => {
     <>
       <Router>
         <Switch>
-          <Route path="/" exact component={Checkout} />
+          <Route path="/checkout" exact component={Checkout} />
           <Route path="/SignUp" component={SignUp} />
           <Route path="/Login" component={Log} />
           <Route path="/cart" component={Cart} />
