@@ -19,6 +19,7 @@ import Api from "./React/ApiCall/Api";
 import Axois from "./React/ApiCall/Axois";
 import Pokemon from "./React/ApiCall/PokemonApi";
 import Map from "./React/Map";
+import Hamm from "./React/Hammad/Hamm";
 // import test from './test'
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/SignUp" component={SignUp} />
           <Route path="/Login" component={Log} />
           <Route path="/cart" component={Cart} />
+          <Route path="/hammad" component={Hamm} />
         </Switch>
         {/* <Cart/> */}
       </Router>
